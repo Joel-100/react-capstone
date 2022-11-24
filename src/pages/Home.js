@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { fetchCountry } from '../store/action';
+import CountryList from '../components/CountryList';
 import africaImg from '../assets/africa.png';
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
       <div className="text-white my-4">
         <h3 className="ml-8">Stats by Country</h3>
       </div>
+      <CountryList data={country} />
     </div>
   );
 };
