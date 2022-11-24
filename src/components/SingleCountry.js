@@ -6,7 +6,7 @@ const SingleCountry = (props) => {
   const { id, index, image, name } = props;
   return (
     <Link
-      to={`/dataPage/${id}`}
+      to={`/details/${id}`}
       key={id}
       className="data-page basis-2/4 flex justify-center items-center flex-col"
     >

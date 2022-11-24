@@ -17,8 +17,6 @@ const Home = () => {
     }
   }, [dispatch]);
 
-  console.log(country);
-
   return (
     <div>
       <div className="flex p-5 items-center border-b">
