@@ -4,8 +4,8 @@ import { fetchCountry } from '../store/action';
 import CountryList from '../components/CountryList';
 import africaImg from '../assets/africa.png';
 
+let retrieveOnce = true;
 const Home = () => {
-  let retrieveOnce = true;
   const country = useSelector((state) => state.country, shallowEqual);
 
   const dispatch = useDispatch();

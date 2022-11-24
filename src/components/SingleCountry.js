@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { Link } from "react-router-dom";
 
-const DataPage = (props) => {
+const SingleCountry = (props) => {
   //  eslint-disable-next-line react/prop-types
   const { id, index, image, name } = props;
   return (
@@ -26,4 +26,4 @@ const DataPage = (props) => {
   );
 };
 
-export default DataPage;
+export default SingleCountry;
