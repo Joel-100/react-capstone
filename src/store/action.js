@@ -25,3 +25,18 @@ export const fetchCountry = createAsyncThunk(FETCH_COUNTRY, async () => {
     })),
   };
 });
+
+const countryReducer = (state = countryList, action) => {
+  const { type, payload } = action;
+  switch (type) {
+    case 'country-name/country/FETCH_COUNTRY/fulfilled':
+      return payload.country;
+
+    default:
+      return state;
+  }
+};
+
+export default countryReducer;
+
+
