@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const FETCH_COUNTRY = 'country-name/country/FETCH_COUNTRY';
-// const GET_COUNTRY = 'country-name/country/GET_COUNTRY';
+const GET_COUNTRY = 'country-name/country/GET_COUNTRY';
 
 const API_URL = 'https://restcountries.com/v3.1/region/africa';
 
@@ -25,6 +25,10 @@ export const fetchCountry = createAsyncThunk(FETCH_COUNTRY, async () => {
     })),
   };
 });
+
+export const getCountry = createAsyncThunk(GET_COUNTRY, async (id) => ({
+  id,
+}));
 
 const countryReducer = (state = countryList, action) => {
   const { type, payload } = action;
